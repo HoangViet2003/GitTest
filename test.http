@@ -1,0 +1,19 @@
+@baseUrl = http://todo-list-app.us-east-1.elasticbeanstalk.com
+
+
+
+GET {{baseUrl}}/todos
+
+
+###
+POST  {{baseUrl}}/todos/:id
+Content-Type: application/json
+
+{
+"description": "sffew",
+"completed": true,
+}
+
+
+###
+DELETE  {{baseUrl}}/todos/2
