@@ -18,7 +18,7 @@ function App() {
       "http://todo-list-app.us-east-1.elasticbeanstalk.com/todos",addNewTodo
       // { description: {updateTodos}, completed: false }
     );
-    setTodos(result.data);
+    console.log(setAddTodo)
     getAllTodosList();
   };
 
@@ -50,7 +50,6 @@ function App() {
     const result = await axios.put(
       `http://todo-list-app.us-east-1.elasticbeanstalk.com/todos/${id}`,updateTodoList
     );
-    setTodos(result.data);
     getAllTodosList();
   };
 
@@ -80,7 +79,8 @@ function App() {
               <button onClick={() => updateTodoFuct(todo.id)}>Update</button>
             </li>
           ))}
-        <input
+          <from>Update line:</from>
+          <input
           type="text"
           onChange={(e) => setUpdateTodo(e.target.value)}
           value={updateTodo}
