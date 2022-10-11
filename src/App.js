@@ -18,7 +18,6 @@ function App() {
       "http://todo-list-app.us-east-1.elasticbeanstalk.com/todos",addNewTodo
       // { description: {updateTodos}, completed: false }
     );
-    console.log(setAddTodo)
     getAllTodosList();
   };
 
@@ -30,7 +29,6 @@ function App() {
     if (result) {
       setTodos(result.data);
     }
-
     return result;
   };
 
